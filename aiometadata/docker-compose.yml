@@ -1,0 +1,19 @@
+version: '3'
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: aiometadata_redis
+    restart: unless-stopped
+    volumes:
+      - ./redis:/data
+  aiometadata:
+    image: ghcr.io/cedya77/aiometadata:latest
+    container_name: aiometadata
+    restart: unless-stopped
+    ports:
+      - "8580:3232"
+    volumes:
+      - ./data:/app/addon/data
+    env_file: .env
+    depends_on:
+      - redis
