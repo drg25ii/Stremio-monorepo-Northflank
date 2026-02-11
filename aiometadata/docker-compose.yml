@@ -1,4 +1,5 @@
-version: '3'
+version: "3.8"
+
 services:
   redis:
     image: redis:7-alpine
@@ -6,14 +7,16 @@ services:
     restart: unless-stopped
     volumes:
       - ./redis:/data
-  aiometadata:
-    image: ghcr.io/cedya77/aiometadata:latest
+
+  aiometa
+    image: ghcr.io/cedya77/aiometalatest
     container_name: aiometadata
     restart: unless-stopped
     ports:
       - "8580:3232"
+    env_file:
+      - .env
     volumes:
-      - ./data:/app/addon/data
-    env_file: .env
+      - .//app/addon/data
     depends_on:
       - redis
