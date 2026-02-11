@@ -1,4 +1,5 @@
-version: '3'
+version: "3.8"
+
 services:
   easyproxy:
     image: justsml/easy-proxy:latest
@@ -7,6 +8,7 @@ services:
     ports:
       - "5050:5050"
     environment:
-      - PROXY_USERNAME=admin
-      - PROXY_PASSWORD=changeme
-      - PROXY_HOST=your-domain
+      PROXY_USERNAME: ${PROXY_USERNAME:-admin}
+      PROXY_PASSWORD: ${PROXY_PASSWORD:-changeme}
+      PROXY_PORT: ${PROXY_PORT:-5050}
+      PROXY_HOST: ${PROXY_HOST:-your-domain.com}
