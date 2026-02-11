@@ -13,7 +13,7 @@ services:
     container_name: aiometadata
     restart: unless-stopped
     ports:
-      - "8580:3232"
+      - "3232:3232"
     env_file:
       - .env
     volumes:
