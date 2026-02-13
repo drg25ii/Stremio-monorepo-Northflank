@@ -27,7 +27,7 @@ Runtime variables (obligatorii):
 
 Runtime variables (opționale):
 •⁠  ⁠⁠ LOG_LEVEL=info ⁠
-•⁠  ⁠⁠ ADDON_PASSWORD=Inter2010
+•⁠  ⁠⁠ ADDON_PASSWORD=
 
 Storage (recomandat):
 •⁠  ⁠Volume mount: ⁠ /app/data ⁠
@@ -59,7 +59,7 @@ Image: ⁠ mhdzumair/mediaflow-proxy:latest ⁠
 Port (internal): ⁠ 8888 ⁠ (HTTP, public, port name ⁠ http ⁠)  
 
 Runtime variables:
-•⁠  ⁠⁠ API_PASSWORD=Inter2010⁠
+•⁠  ⁠⁠ API_PASSWORD=
 
 ---
 
@@ -70,7 +70,7 @@ Port (internal): ⁠ 5050 ⁠ (HTTP, public, port name ⁠ http ⁠)
 
 Runtime variables:
 •⁠  ⁠⁠ PROXY_USERNAME=admin ⁠
-•⁠  ⁠⁠ PROXY_PASSWORD=Inter2010
+•⁠  ⁠⁠ PROXY_PASSWORD=
 •⁠  ⁠⁠ PROXY_PORT=5050 ⁠
 •⁠  ⁠⁠ PROXY_HOST=REPLACE_WITH_PUBLIC_DOMAIN_OR_IP ⁠
 
