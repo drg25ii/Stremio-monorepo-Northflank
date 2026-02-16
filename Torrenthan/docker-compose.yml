@@ -1,9 +1,8 @@
 services:
   torrenthan:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: registry.hf.space/epcdrg2-torrenthan:latest
     ports:
-      - "7860:7860"
+      - "${HOST_PORT:-7860}:7860"
     environment:
       PORT: "7860"
+    restart: unless-stopped
