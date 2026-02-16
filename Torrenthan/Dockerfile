@@ -1,3 +1,3 @@
-FROM ghcr.io/LUC4N3X/Torrenthan:latest
+FROM ghcr.io/LUC4N3X/Torrenthan
 
 
