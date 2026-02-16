@@ -3,9 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: torrenthan:latest
+    image: torrenthan:northflank
     ports:
-      - "7002:7002"
+      - "7860:7860"
     environment:
-      PORT: "7002"
+      PORT: "7860"
     restart: unless-stopped
