@@ -1,24 +1,7 @@
-FROM python:3.11-slim
+FROM registry.hf.space/epcdrg2-torrenthan:latest
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates \
-  && rm -rf /var/lib/apt/lists/*
+# Northflank/HF folosesc de obicei variabila PORT; setăm implicit 7860
+ENV PORT=7860
 
-RUN useradd -m -u 1000 user
-ENV HOME=/home/user \
-    PATH=/home/user/.local/bin:$PATH \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PORT=7860
-
-WORKDIR /home/user/app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-USER user
 EXPOSE 7860
-CMD ["sh","-c","uvicorn main:app --host 0.0.0.0 --port ${PORT}"]
+
