@@ -1,0 +1,11 @@
+services:
+  torrenthan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: torrenthan:latest
+    ports:
+      - "7002:7002"
+    environment:
+      PORT: "7002"
+    restart: unless-stopped
