@@ -1,6 +1,6 @@
 services:
   torrenthan:
-    image: FROM ghcr.io/luc4n3x/torrenthan@sha256:1.0.0
+    image: FROM ghcr.io/luc4n3x/torrenthan: latest
     ports:
       - "7002:7002"
     environment:
