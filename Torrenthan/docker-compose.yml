@@ -1,8 +1,6 @@
 services:
   torrenthan:
-    image: ghcr.io/drg25ii/torrenthan:latest
+    image: registry.hf.space/epcdrg2-torrenthan:latest
     ports:
       - "7002:7002"
-    environment:
-      PORT: "7002"
     restart: unless-stopped
