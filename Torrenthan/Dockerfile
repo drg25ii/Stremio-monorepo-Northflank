@@ -1,4 +1,4 @@
-FROM ghcr.io/drg25ii/torrenthan@sha256:7d413f023b27e5c5a9b4467c355d54b8604474aa9d6bde78f51020bd71615a20
+FROM ghcr.io/drg25ii/torrenthan:latest
 
 
 
