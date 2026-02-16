@@ -1,3 +1,5 @@
-FROM ghcr.io/LUC4N3X/Torrenthan app
+FROM registry.hf.space/epcdrg2-torrenthan:latest
+ENV PORT=7860
+EXPOSE 7860
 
 
