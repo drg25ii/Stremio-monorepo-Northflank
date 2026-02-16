@@ -1,8 +1,8 @@
 services:
   torrenthan:
-    image: registry.hf.space/epcdrg2-torrenthan:latest
+    image: ghcr.io/LUC4N3X/Torrenthan:latest
     ports:
-      - "${HOST_PORT:-7860}:7860"
+      - "7002:7002"
     environment:
-      PORT: "7860"
+      PORT: "7002"
     restart: unless-stopped
