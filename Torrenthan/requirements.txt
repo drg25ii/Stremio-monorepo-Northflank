@@ -1,2 +1,6 @@
+curl-cffi
+httpx
 fastapi
-uvicorn[standard]
+uvicorn
+jinja2
+fake-headers
