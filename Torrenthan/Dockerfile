@@ -1,7 +1,5 @@
 FROM registry.hf.space/epcdrg2-torrenthan:latest
-ENV PORT=7860
-EXPOSE 7860
-
-
-
-
+USER root
+ENV PORT=7002
+EXPOSE 7002
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 7002"]
