@@ -1,6 +1,17 @@
+version: '3.8'
+
 services:
-  torrenthan:
-    image: registry.hf.space/epcdrg2-torrenthan:latest
+  torrentio-ita:
+    container_name: torrentio_ita_addon
+    build: .
     ports:
-      - "7860:7860"
+      - "7000:7000"
+    environment:
+      - PORT=7000
+      # - LOG_LEVEL=info
     restart: unless-stopped
+    volumes:
+      # (Opzionale) Monta la cartella corrente per sviluppo live
+      # Se modifichi il codice, basta riavviare il container
+      - ./:/app
+
